@@ -1,0 +1,94 @@
+<html>
+<head>
+<script src="JQuery.min.js"></script>
+<script>
+$(function(){
+	$("#b1").click(function(){
+		$("div[id='xyg']").first().toggleClass("bg");
+	});
+	$("#b2").click(function(){
+		$("div[id='xyg']").last().toggleClass("bg");
+	});
+	$("#b3").click(function(){
+		$("div[id='xyg']").eq(3).toggleClass("bg");
+	});
+	$("#b4").click(function(){
+		$("div[id='div1']").parent().toggleClass("border");
+	});
+	$("#b5").click(function(){
+		$("div[id='div1']").parents().toggleClass("border");
+	});
+	$("#b6").click(function(){
+		$("div[id='xyg2']").children().toggleClass("border");
+	});
+	$("#b7").click(function(){
+		$("div[id='xyg2']").find("div").toggleClass("border");
+	});
+	$("#b8").click(function(){
+		$("div[id='xyg3']").siblings().toggleClass("border");
+	});
+});
+</script>
+<style>
+div{
+   padding:20px;
+}
+div#div1{background-color:red;}
+.border{border:1px yellow solid;}
+.bg{background-color:pink;}
+div#parent{background-color:green;}
+</style>
+</head>
+<body>
+<button id="b1">筛选class=xyg的第一个</button>
+<button id="b2">筛选class=xyg的最后一个</button>
+<button id="b3">筛选class=xyg的指定数字</button>
+<div id="xyg">div</div>
+<div id="xyg">div</div>
+<div id="xyg">div</div>
+<div id="xyg">div</div>
+<div id="xyg">div</div>
+<button id="b4">当前元素的parent()</button>
+<button id="b5">当前元素的parents()</button>
+<div id="parent">
+祖先元素
+<div style="background-color:pink;">
+父元素
+	<div id="div1">
+		当前元素
+	</div>
+</div>
+</div>
+<button id="b6">当前元素的children()</button>
+<button id="b7">当前元素的find()</button>
+<div id="xyg2" style="background-color:red;">
+当前元素
+<div style="background-color:pink;">
+儿子元素
+	<div style="background-color:green;">
+		后代元素
+	</div>
+</div>
+<div style="background-color:pink;">
+儿子元素
+	<div style="background-color:green;">
+		后代元素
+	</div>
+</div>
+</div>
+
+<button id="b8">当前元素的同级元素</button>
+<div style="background-color:pink;">
+父元素
+	<div id="xyg3" style="background-color:red">
+		当前元素
+	</div><br/>
+	<div style="background-color:red">
+		同级元素
+	</div><br/>
+	<div style="background-color:red">
+		同级元素
+	</div><br/>
+</div>
+</body>
+</html>

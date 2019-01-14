@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="gb2312">
+    <title></title>
+    <script>
+function f1(){
+	document.write("调用函数f1<br/>");
+}
+try{
+	f1();
+	f2();
+}catch(err){
+	document.write("捕捉错误：");
+	document.write(err.message);
+}
+document.write("<br/>后续代码");
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

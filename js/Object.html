@@ -1,0 +1,39 @@
+<html>
+<head>
+   <meta charset="gb2312">
+<script src="ArrayTool.js" type="text/javascript"></script>
+<script type="text/javascript">
+function p(s){
+  document.write(s);
+  document.write("<br>");
+}
+/*有函数就有对象*/
+function Hero(name){
+	this.name=name;
+	this.kill = function(){
+	document.write(this.name+"正在杀敌<br/>");
+	}
+}
+var gareen= new Hero("李白");
+gareen.kill();
+/*添加方法，不属于Hero()*/
+Hero.prototype.keng=function(){
+	document.write(this.name+"正在打野<br/>");
+}
+gareen.keng();
+
+//work..
+var tool = new ArrayTool();
+var sz = [23,1,5,7,3];
+var v1 = tool.max(sz);
+var v2 = tool.index(sz,2);
+p(v1);
+p(v2);
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

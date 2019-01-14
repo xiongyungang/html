@@ -1,0 +1,24 @@
+<html>
+<body>
+<div id="parentDiv">
+   父Div的内容
+ <div id="d1">第一个div</div>
+ <div id="d2">第二个div</div>
+ <div id="d3">第三个div</div></div>
+ 
+<button onclick="showParent()">不断递归d1的父节点</button>
+</body>
+<script>
+function showParent(){
+	if(null==node)
+      node = document.getElementById("d1");
+    
+   if(document == node)
+      alert("已是根节点:document");
+   else{
+      alert(node.parentNode);
+      node = node.parentNode;
+   }
+}
+</script>
+</html>

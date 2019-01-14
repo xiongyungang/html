@@ -1,0 +1,22 @@
+<html>
+<head>
+<style>
+</style>
+
+</head>
+
+<body>
+<div id="tag" class="xyg" align="center">HELLO DOM</div>
+</body>
+<script>
+var div = document.getElementById("tag");
+var szShuxin = div.attributes;
+document.write("га"+szShuxin.length+"ИіЪєад<br/>");
+for(i = 0;i<szShuxin.length;i++){
+	document.write(szShuxin[i].nodeName);
+	document.write(":");
+	document.write(szShuxin[i].nodeValue);
+	document.write("<br/>");
+}
+</script>
+</html>

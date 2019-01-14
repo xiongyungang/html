@@ -1,0 +1,35 @@
+<script src="http://how2j.cn/study/jquery.min.js"></script>
+ 
+<script>
+$(function(){
+   $(".b").click(function(){
+      var value = $(this).val();
+      $("td[rowspan=13]"+value).toggle(500);
+   });
+        
+});
+        
+</script>
+ 
+<style>
+table{
+    border-collapse:collapse;
+        table-layout:fixed;
+    width:80%;
+}
+table td{
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+ 
+div button{
+    display:block;
+}
+ 
+</style>
+<button value=":input" class="b">:input</button>
+<table>
+<tr><td rowspan="13"><button>button°´Å¥</button></td><tr>
+</table>
+ 

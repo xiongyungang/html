@@ -1,0 +1,21 @@
+<html>
+<head>
+   <meta charset="gb2312">
+<script>
+function p(s){
+  document.write(s);
+  document.write("<br>");
+}
+p(window.innerHeight+"X"+window.innerWidth);
+
+  document.write("浏览器的宽度:"+window.outerWidth);
+  document.write("<br>");
+  document.write("浏览器的高度:"+window.outerHeight);
+function open(){
+	myWindow=window.open("/");
+}
+</script>
+</head>
+<body>
+<button onclick="open()">百度一下</button>
+</html>

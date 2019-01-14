@@ -1,0 +1,44 @@
+<html>
+<script src="jquery.min.js"></script>
+<script>
+$(function(){
+	$("#b1").click(function(){
+		$("div:odd").css({"background-color":"pink","color":"#000000"});
+	});
+	$("#b2").click(function(){
+		$("div:even").css({"background-color":"red","color":"#FFFFFF"});
+	});
+	$("#b3").click(function(){
+		$("div:visible").hide();
+	});
+	$("#b4").click(function(){
+		$("div:hidden").show();
+	});
+});
+</script>
+<button id="b1">div:odd</button>
+<button id="b2">div:even</button>
+<button id="b3">div:visible</button>
+<button id="b4">div:hidden</button>
+<div>div</div>
+
+<div>div</div>
+
+<div>div</div>
+
+<div>div</div>
+
+<div>div</div>
+
+<div>div</div>
+
+<div>div</div>
+
+<div>div</div>
+
+<div>div</div>
+
+<div>div</div>
+
+<div>div</div>
+</html>

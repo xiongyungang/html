@@ -1,0 +1,15 @@
+<html>
+<head>
+<script src="../jquery/jquery.min.js"></script>
+<script>
+	var s1 = "{\"NAME\":\"Timo\",";
+	var s2 = "\"Hp\":234}";
+	var s3 = s1 + s2;
+	document.write(s3);
+	document.write("<br>");
+	document.write($.parseJSON(s3));
+</script>
+</head>
+<body>
+</body>
+</html>

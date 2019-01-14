@@ -1,0 +1,34 @@
+<html>
+<head>
+   <meta charset="gb2312">
+</head>
+<body>
+当前时间：<span id="time"></span>
+</body>
+<script>
+function p(s){
+  document.write(s);
+  document.write("<br>");
+}
+p(new Date());
+var d1=new Date();
+p(d1.getMonth()+1);
+document.write(d1.getHours()+":"+d1.getMinutes()+":"+d1.getSeconds()+":"+d1.getMilliseconds());
+//document.write(d1.toLocaleString());
+function get(){
+	//获取到当前的系统时间
+		var date = new Date();
+		//把当前系统时间拼装成我指定的格式。
+		var timeInfo =  date.getFullYear()+"年"+(date.getMonth()+1)+"月"+date.getDate()+"日 "+
+	date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+	
+		//找span对象
+		var  spanObj = document.getElementById("time");
+		//设置span标签体的内容
+		spanObj.innerHTML = timeInfo.fontcolor("red");
+}
+//定时方法
+window.setInterval("get()",1000);
+
+</script>
+</html>

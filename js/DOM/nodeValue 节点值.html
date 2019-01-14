@@ -1,0 +1,41 @@
+<html>
+<head>
+<style>
+</style>
+
+</head>
+
+<body>
+<div id="tag">HELLO DOM</div>
+<input type="text" id="input" test="xyg" value="这是一个输入框"><br>
+<input type="submit" onclick="get()" value="获取"><br/>
+---------------------------<br>
+
+</body>
+<script>
+var el = document.getElementById("tag");
+document.write("document.nodeValue: "+document.nodeValue+"<br>");
+document.write("el.nodeValue: "+el.nodeValue+"<br>");
+document.write("el.attributes[0].nodeValue:  "+el.attributes[0].nodeValue);
+document.write("<br/>el.childNodes[0].nodeValue:  "+el.childNodes[0].nodeValue);
+
+function get(){
+	var el = document.getElementById("input");
+	var s = "";
+	var nodes=el.attributes;
+	for(var i=0;i<nodes.length;i++){
+		s+=nodes[i].nodeName;
+		s+=":";
+		s+=nodes[i].nodeValue;
+		s+="<br>";
+	}
+	/*另一种方式*/
+	s+="-------------------<br>";
+	s+="id:"+el.id+"<br>";
+	s+="value:"+el.value+"<br>";
+	s+="type:"+el.type+"<br>";
+	s+="test:"+el.getAttribute("test");//获取自定义
+	document.getElementById("tag").innerHTML=s;
+}
+</script>
+</html>

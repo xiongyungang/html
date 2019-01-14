@@ -1,0 +1,17 @@
+<html>
+<body>
+<span id="p1">TILE</span>
+</body>
+<script>
+function p(s){
+document.write("<br>");
+document.write(s);
+}	
+
+var el = document.getElementById("p1");
+p("document.nodeType: "+document.nodeType);
+p("el.nodeType: "+el.nodeType);
+p("el.attributes[0].nodeType: "+el.attributes[0].nodeType);
+p("el.childNodes[0].nodeType: "+el.childNodes[0].nodeType);
+</script>
+</html>

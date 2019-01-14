@@ -1,0 +1,38 @@
+<html>
+<head>
+   <meta charset="gb2312">
+<script>
+function p(s){
+  document.write(s);
+  document.write("<br>");
+}
+function comparator(v1,v2){
+return v1-v2;
+}
+var sz1=new Array(3,3,3,3,434,34,21);
+p(sz1);
+document.write("数组长度：");
+p(sz1.length);
+p("");
+for(i in sz1)
+	p(sz1[i]);
+var sz2 = new Array(5,3,35,5,3,2);
+document.write("数组连接：");
+p(sz1.concat(sz2));
+document.write("数组字符串表达，自定义连接符：");
+p(sz1.join("----"));
+document.write("sz2.sort():");p(sz2.sort());//默认asc码排序
+document.write("sz2.sort(compatator):");p(sz1.sort(comparator));//传递比较器函数
+document.write("sz2:");p(sz2.toString());
+document.write("sz2.pop():");sz2.pop();p(sz2.toString());
+document.write("sz2.shift():");sz2.shift();p(sz2.toString());//返回删除上同
+document.write("sz2.push('sj'):");sz2.push("sj");p(sz2.toString());
+document.write("sz2.reverse():");sz2.reverse();p(sz2.toString());
+document.write("sz1:");p(sz1.toString());
+document.write("sz1.slice(1,5):");p(sz1.slice(1,5));//包头不包尾
+</script>
+</head>
+<body>
+
+</body>
+</html>

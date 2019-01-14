@@ -1,0 +1,61 @@
+<html>
+<head>
+<script>
+ 
+function showPre(){
+    var d2 = document.getElementById("d2");
+    alert(d2.previousSibling.innerHTML);
+}
+ 
+function showNext(){
+    var d2 = document.getElementById("d2");
+    alert(d2.nextSibling.innerHTML);
+}
+
+var node = null;
+function showParent(){
+	if(node==null){
+		node=document.getElementById("d1");
+	}
+	if(node==document)
+		alert("已经是根节点document");
+	else{
+		alert(node);
+		node=node.parentNode;
+	}
+}
+function total(){
+	var parent=document.getElementById("parentDiv");
+	alert(parent.childNodes.length);
+}
+function total2(){
+	var parent=document.getElementById("parentDiv");
+	alert(parent.children.length);
+}
+function first(){
+	var parent=document.getElementById("parentDiv");
+	alert(parent.firstChild+"注意这里是文本");
+}
+function last(){
+	var parent=document.getElementById("parentDiv");
+	alert(parent.lastChild);
+}
+</script>
+  
+<div id="parentDiv">
+   父Div的内容
+ <div id="d1">第一个div</div><div id="d2">第二个div</div><div id="d3">第三个div</div></div>
+  
+<button onclick="showPre()">获取d2的前一个同胞</button>
+ 
+<button onclick="showNext()">获取d2的后一个同胞</button>
+
+<button onclick="showParent()">递归d2父节点</button><br/><br/>
+<!--只要有空格换行都是父节点的内容节点-->
+<button onclick="total()">子节点数目</button>
+<!排除文本节点的子节点数目-->
+<button onclick="total2()">去除文本节点的子节点数目</button>
+<button onclick="first()">第一个子节点</button>
+<button onclick="last()">最后一个子节点</button>
+</body>
+</html>

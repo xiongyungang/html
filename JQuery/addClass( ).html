@@ -1,0 +1,29 @@
+<html>
+<head>
+<script src="jquery.min.js"></script>
+<script>
+	$(function(){
+		$("#b1").click(function(){
+			$("#div1").removeClass("pink");
+		});
+		$("#b2").click(function(){
+			$("#div1").addClass("pink");	
+		});
+//如果存在就删除,如果不存在，就添加,可检查元素
+		$("#b3").click(function(){
+			$("#div1").toggleClass("xyg");	
+		});
+	});
+</script>
+<style>
+.pink{background-color:pink;}
+.xyg{background-color:red;}
+</style>
+</head>
+<body>
+<div id="div1">hello jquery!</div>
+<button id="b2">addClass</button>
+<button id="b1">removeClass</button>
+<button id="b3">toggleClass</button>
+</body>
+</html>

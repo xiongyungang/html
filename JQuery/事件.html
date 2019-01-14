@@ -1,0 +1,28 @@
+<script src="jquery.min.js"></script>
+ 
+<script>
+  $(document).ready(function(){
+    $("#message1").html("页面加载成功");
+   
+  });
+  $(function(){
+    $("#img").load(function(){
+      $("#message2").html("图片加载成功");
+    });
+	$("#b1").click(function(){
+		$("#message3").html("单击");
+	});
+	$("#b1").dblclick(function(){
+		$("#message3").html("双击");
+	});
+  });
+ 
+</script>
+  
+<div id="message1"></div>
+<div id="message2"></div>
+<div id="message3"></div>
+
+ 
+<img id="img" src="http://how2j.cn/example.gif">
+<button id="b1">单击/双击</button>

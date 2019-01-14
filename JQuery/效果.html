@@ -1,0 +1,42 @@
+<html>
+<head>
+<script src="jquery.min.js"></script>
+<script>
+$(function(){
+	$("#b1").click(function(){
+		$("#xyg").hide(1000);
+	});
+	$("#b2").click(function(){
+		$("#xyg").show(1000);
+	});
+	$("#b3").click(function(){
+		$("#xyg").toggle(1000);
+	});
+	$("#b4").click(function(){
+		$("#xyg").slideUp(1000);
+	});
+	$("#b5").click(function(){
+		$("#xyg").slideDown(1000);
+	});
+	$("#b6").click(function(){
+		$("#xyg").slideToggle(1000);
+	});
+});
+</script>
+</head>
+<style>
+div{width:300px;height:100px;background-color:pink;border:1px solid;}
+</style>
+<body>
+<button id="b1">hide(1000)</button>
+<button id="b2">show(1000)</button>
+<button id="b3">toggle(1000)</button>
+<button id="b4">slideUp(1000)</button>
+<button id="b5">slideDown(1000)</button>
+<button id="b6">slideToggle(1000)</button>
+
+<div id="xyg">
+用于演示效果的div
+</div>
+</body>
+</html>

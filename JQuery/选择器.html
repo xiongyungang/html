@@ -1,0 +1,30 @@
+<html>
+<script src="jquery.min.js"></script>
+<script>
+$(function(){
+	$("#b1").click(function(){
+		$("div.xyg span").css({"background-color":"pink","color":"#FFFFFF"});
+	});
+	$("#b2").click(function(){
+		$("div:first").css({"background-color":"pink","color":"#FFFFFF"});
+	});
+	$("#b3").click(function(){
+		$("div:last").css({"background-color":"pink","color":"#FFFFFF"});
+	});
+});
+</script>
+
+<button id="b1">给div下的span加css</button>
+
+<button id="b2">给第一个div加css</button>
+<button id="b3">给第二个div加css</button>
+
+<div class="xyg"><span>div下的span</span></div><br><br/>
+<span class="xyg"><div>span下的div</div></span>
+
+<div>div</div>
+
+<div>div</div>
+
+<div>div</div>
+</html>

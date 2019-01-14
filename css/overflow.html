@@ -1,0 +1,41 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GB2312">
+</head>
+
+<style>
+div.in{float:left;width:30%;background-color:pink;}
+/*这里hidden是清除浮动*/
+div.out{overflow:hidden;float:right;width:70%;background-color:#dadada;}
+/*垂直居中*/
+div#d{line-height:50px;border:solid 1px lightskyblue;}
+div#d2{border:red 1px solid;padding:30 0;}
+div#d3{border:green 1px solid;display:table-cell;vertical-align:middle;height:200px;}
+div.left{float:left;background-color:pink;width:200px;}
+div.right{float:right;background-color:pink;width:200px;}
+div.center{background-color:blue;margin:0 200px}
+div.bottom{position:absolute;bottom:0;background-color:#aaaaaa;text-size:30px;width:100%;}
+span{border-bottom:2px solid lightgray; float:left;}
+</style>
+
+<body>
+<div class="in">主播这把会吃鸡:30%</div>
+<div class="out">主播这把不会吃鸡:70%</div></div>
+<div id="d">line-height适合单独一行垂直居中</div>
+<div id="d2">垂直居中方式2 上下内边距</div>
+图片垂直居中，用显示方式
+<div id="d3"><img src="example.gif"></div>
+<div class="left">左边固定宽度</div>
+<div class="right">右边固定宽度</div>
+<div class="center">中间自适应</div>
+<span>有换行的span</span>
+<span>有换行的span</span>
+<span>有换行的span</span>
+<div style="clear:both"></div>
+<span>有换行的span</span>
+<span>有换行的span</span>
+<span>有换行的span</span>
+<div class="bottom">底部div</div>
+<img src="wangwang.gif">
+
+</html>

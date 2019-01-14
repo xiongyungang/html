@@ -1,0 +1,31 @@
+<html>
+<head>
+   <meta charset="gb2312">
+<script>
+function p(s){
+  document.write(s);
+  document.write("<br>");
+}
+/*原型*/
+//一个对象自动拥有prototype的所有成员属性和方法
+//可以修改prototype的值
+//给内置对象添加自定义函数
+
+/*注意getMax不要加()*/
+/*prototype不要大写*/
+Array.prototype.getMax = function(){
+	var max = this[0];
+	for(var a =1;a<this.length;a++)
+	{
+		if(this[a]>max)
+			max=this[a];
+	}
+	return max;
+}
+var sz= new Array(3,54,6,4);
+p(sz.getMax());
+</script>
+</head>
+<body>
+</body>
+</html>

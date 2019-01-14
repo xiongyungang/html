@@ -1,0 +1,23 @@
+<html>
+<head>
+<style>
+</style>
+
+</head>
+
+<body>
+<div id="tag">HELLO DOM</div>
+<button onclick="update1()">方式1</button>
+<button onclick="update2()">方式2</button>
+</body>
+<script>
+function update1(){
+	var el = document.getElementById("tag");
+	el.childNodes[0].nodeValue="FUCK DOM";
+}
+function update2(){
+	var el = document.getElementById("tag");
+	el.innerHTML="FUCK YOU DOM";
+}
+</script>
+</html>

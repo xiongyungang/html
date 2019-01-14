@@ -1,0 +1,41 @@
+<html>
+<script src="jquery.min.js"></script>
+<script>
+$(function(){
+	$("#b1").click(function(){
+		$("div[id]").css("border","1px blue solid");
+	});
+	$("#b2").click(function(){
+		$("div[id='pink']").toggleClass("xyg");
+	});
+	$("#b3").click(function(){
+		$("div[id!='pink']").toggleClass("xyg");
+	});
+	$("#b4").click(function(){
+		$("div[id^='g']").toggleClass("xyg");
+	});
+	$("#b5").click(function(){
+		$("div[id$='k']").toggleClass("xyg");
+	});
+	$("#b6").click(function(){
+		$("div[id*='in']").toggleClass("xyg");
+	});
+});
+</script>
+<style>
+.xyg{border:1px red solid;}
+</style>
+
+<button id="b1">给有id属性的div添加边框</button>
+<button id="b2">给id=pink的div切换边框</button>
+<button id="b3">给id!=pink属性的div切换边框</button>
+<button id="b4">给有id以g开头的div切换边框</button>
+<button id="b5">给有id以k结尾的div切换边框</button>
+<button id="b6">给有id包含in的div切换边框</button>
+
+<div id="pink">id="pink"的div</div>
+
+<div id="green">id="green"的div</div>
+
+<div>没有id属性的div</div>
+</html>

@@ -1,0 +1,69 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GB2312">
+</head>
+
+<style>
+/*让div和span的边框显露出来，便于理解本知识点*/
+div,span{border: 1px gray solid;margin:10px;}
+/*设置表格css样式*/
+table{color:#FFFFFF;}
+td{background-color:#AAAAAA;}
+.tre{background-color:#FF00FF;}
+#cd{background-color:#0000FF;}
+p#pass1{width:300px;height:50px;background-color:pink;letter-spacing:20;}
+p#pass2{width:180px;height:100px;background-color:green;color:#FFFFFF;text-align:center;text-decoration:underline;line-height:300%;}
+div#test{background-image:url(background.jpg);width:200px;height:100px;}
+/*div#repeat{background-image:url(background_small.jpg);width:200px;height:100px;background-repeat:repeat-x;}*/
+div#repeat{background-image:url(background_small.jpg);width:200px;height:100px;background-size:contain;}
+div.fontsize{font-size:30px;color:#FF0000;font-style:italic;text-align:center;font-weight:bold;}
+/* 风格  粗细  大小/行高 字体 a顺序*/
+div.all{font:italic bold 30px "Times New Roman";}
+div.border{border-color:#FF0000;border-width:2px;}
+/*边框一起设置：宽度，风格，颜色*/
+div.allborder{border:2px dotted #000000;}
+/*边界边框*/
+div#topborder{width:10%;height:10%;background-color:#aaaaaa;border-top-style:solid;border-top-color:#FF0000;border-top-width:50px;
+border-left-style:solid;border-left-color:#FFFF00;border-left-width:50px;
+border-right-style:solid;border-right-color:#FF00FF;border-right-width:50px;
+border-bottom-style:solid;border-bottom-color:#aacc56;border-bottom-width:50px;}
+</style>
+
+<body>
+<table border="1" width="700px" height="300">
+<tr>
+<td width="20%" bgcolor="#FFFF00" class="tre"> 时间
+	</td>
+	<td>星期一
+	</td>
+<td>星期二
+	</td>
+<td>星期三
+	</td>
+<td>星期四
+	</td>
+<td>星期五
+	</td>
+<td>星期六
+	</td>
+<td>星期日
+	</td>
+</tr>
+<tr>
+<td bgcolor="#FF0000" id="cd">上午
+	</td>
+</tr>
+<tr><td bgcolor="#ff00ff" id="cd">中午</td></tr>
+<tr><td bgcolor="#aaaaaa" id="cd">下午</td></tr>
+</table>
+<p id="pass1">文字间距+++效果</p>
+<p id="pass2">行间距<br/>行间距</p>
+<div id="test">这是一个背景图片</div>
+<div id="repeat">背景重复</div>
+<div class="fontsize">设置字体格式</div>
+<div class="all">斜体的 粗体的 大小是30px的 "Times New Roman"</div>
+<div class="border">边框属性</div>
+<div class="allborder">边框属性一起设置</div>
+<div id="topborder">边界边框</div>
+</body>
+</html>

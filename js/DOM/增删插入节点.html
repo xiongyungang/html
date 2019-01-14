@@ -1,0 +1,42 @@
+<html>
+<div id="d" style="border:2px dotted red;">这是一div</div>
+<script>
+function add(){
+	var el = document.createElement("hr");
+	var div = document.getElementById("d");
+	div.appendChild(el);
+}
+function addText(){
+	var text = document.createTextNode("通过DOM创建文本");
+	var div = document.getElementById("d");
+	div.appendChild(text);
+}
+function addAtt(){
+  var div1 = document.getElementById("d");
+  div1.setAttribute("style","border:2px dotted red;color:red;");
+}
+function removeDiv(){
+  var div1 = document.getElementById("d");
+	var parent=div1.parentNode;
+	parent.removeChild(div1);
+	
+}
+function removeAtt(){
+  var div1 = document.getElementById("d");
+	div1.removeAttribute("style");
+	
+}
+function removeText(){
+  var div1 = document.getElementById("d");
+	div1.innerHTML="";
+	
+}
+</script>
+ 
+<button onclick="add()">在div中追加一个元素节点</button>
+ <button onclick="addText()">在div中追加一个文本节点</button>
+ <button onclick="addAtt()">在div中追加一个属性节点</button><br/><br/>
+<button onclick="removeDiv()" style="background-color:red;">删除元素节点</button>
+ <button onclick="removeText()">删除文本节点</button>
+ <button onclick="removeAtt()">删除属性节点</button>
+</html>

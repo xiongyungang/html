@@ -1,0 +1,69 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GB2312">
+</head>
+
+<style>
+/*绝对定位*/
+p.abs{position:absolute;left:50%;top:50%;z-index:2;}
+/*z-index越大越上*/
+div.abs{position:absolute;left:250px;top:450px;z-index:2;}
+img#i1{position:absolute;left:450px;top:150px;z-index:3;}
+img#i2{position:absolute;left:450px;top:180px;z-index:2;}
+/*相对定位*/
+p.r{position:relative;left:250px;top:450px}
+/*浮动 float 左右*/
+p.fr{float:right;}
+p.fl{float:left;}
+/*水平排列div*/
+div.d1{border:red solid 1px;float:left;margin-right:50px}
+div.d2{border:#000000 solid 1px;float:left;margin-right:50px}
+/*显示方式*/
+.putong{border:red solid 1px;width:70px;height:40px;margin-top:50px;margin-left:50px}
+span.d{display:block;border:red solid 1px;}
+div.in{display:inline;margin-left:50px}
+/*内连块级可指定大小并处同一行*/
+span.din{display:inline-block;border:#aaaaaa solid 1px;margin-right:20px;height:50px;margin-top:50px}
+/*内容居中*/
+div.center{margin:0 auto;width:500px}
+</style>
+
+<body>
+<p class="abs">hello</p>
+<div class="abs">
+<p>hello world!</p>
+<p>hello world!</p>
+<p>hello world!</p>
+<p>hello world!</p>
+<p>hello world!</p>
+<p>hello world!</p>
+<p>hello world!</p>
+<p>hello world!</p>
+</div>
+
+<p>普通位置1</p>
+<p>普通位置2</p>
+<p id="r">相对位置3</p>
+<p class="fr">浮动位置4</p>
+<p>普通文字5</p>
+<p class="fl">浮动位置6</p>
+<p>普通位置7</p>
+
+<img id="i1" src="example.gif">
+<img id="i2" src="example.gif">
+<div class="d1">div1</div>
+<div class="d2">div2</div>
+<div class="d1">div1</div>
+<div class="d2">div2</div>
+<div class="putong">普通div</div>
+<span class="putong">普通span</span>
+<span class="putong">普通span</span>
+<span class="putong">普通span</span>
+<span class="d">块级span</span><span class="d">块级span</span><span class="d">块级span</span>
+<div class="in">内联div1</div><div class="in">内联div2</div><div class="in">内联div3</div>
+<br/>
+<span class="din">内连块级1</span><span class="din">内连块级2</span><span class="din">内连块级3</span>
+<div class="center"><div>div中的div</div></div>
+
+</body>
+</html>

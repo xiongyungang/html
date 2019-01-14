@@ -1,0 +1,12 @@
+<html>
+<body>
+<div id="x1">hello dom</div>
+</body>
+<script>
+var el = document.getElementById("x1");
+//childNodes获取其所有的子节点。 其中第一个子节点，就是其内容节点
+var content = el.childNodes[0];
+document.write(content.nodeName);
+document.write(content.nodeValue);
+</script>
+</html>

@@ -1,0 +1,37 @@
+<html>
+<head>
+   <meta charset="gb2312">
+<script>
+function p(s){
+  document.write(s);
+  document.write("<br>");
+}
+var n1 = new Number(123);
+document.write(n1);
+document.write(typeof n1);
+var v1 = 123;
+document.write("<br/>"+v1);
+document.write(typeof v1);
+document.write("<br/>Number对象的最小值："+Number.MIN_VALUE);
+document.write("<br/>Number对象的最大值:"+Number.MAX_VALUE);
+document.write("<br/>NaN表示不是数字");
+n1=new Number("d");
+p(n1);
+document.write("数字对象toFixed()方法保留小数");
+n1=new Number(465);
+p(n1.toFixed(2));
+     function jisuan(){
+	var v1 = document.getElementById("v2").value;
+	var v2 = document.getElementById("v1").value;
+	document.getElementById("v3").value=parseInt(v1)*parseInt(v2);
+	}
+p("随机数："+Math.random().toFixed(1)*10+"<br/>");
+</script>
+</head>
+<body>
+<input type="text" id="v1">
+<input type="text" id="v2">
+<input type="text" id="v3">
+ <button onclick="jisuan()">按钮</button>
+</body>
+</html>

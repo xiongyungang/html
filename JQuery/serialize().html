@@ -1,0 +1,24 @@
+<script src="jquery.min.js"></script>
+<div id="checkResult"></div>
+<div id="data"></div>
+<a href="http://how2j.cn/study/checkName.jsp">http://how2j.cn/study/checkName.jsp</a>
+ 
+<form id="form">   
+输入账号 :<input id="name" type="text" name="name"> <br>
+输入年龄 :<input id="age" type="text" name="age"> <br>
+输入手机号码 :<input id="mobile" type="text" name="mobile"> <br>
+     
+</form>
+ 
+<script>
+$(function(){
+   $("input").keyup(function(){
+      var data = $("#form").serialize();
+      var url = "http://how2j.cn/study/checkName.jsp";
+      var link = url+"?"+ data;
+      $("a").html(link);
+      $("a").attr("href",link);
+   });
+});
+    
+</script>

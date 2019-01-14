@@ -1,0 +1,25 @@
+<html>
+<head>
+<script src="jquery.min.js"></script>
+<script>
+	$(function(){
+		$("#b1").click(function(){
+			$("#div1").css("background-color","pink");
+		});
+		$("#b2").click(function(){
+			$("#div2").css({"background-color":"red","color":"#FFFFFF"});	
+		});
+	});
+</script>
+<style>
+.pink{background-color:pink;}
+.xyg{background-color:red;}
+</style>
+</head>
+<body>
+<div id="div1">hello jquery!</div>
+<div id="div2">hello jquery!</div>
+<button id="b1">添加单一样式</button>
+<button id="b2">添加多种样式</button>
+</body>
+</html>

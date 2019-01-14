@@ -1,0 +1,25 @@
+<html>
+<head>
+<script src="jquery.min.js"></script>
+<script>
+	$(function(){
+		$("#html").click(function(){
+			alert($("#div1").html());
+		});
+		$("#text").click(function(){
+			alert($("#div1").text());
+		});
+	});
+	
+</script>
+</head>
+<body>
+<button id="html">html()</button>
+<button id="text">text()</button>
+<div id="div1">我是div1
+	<span>我是div1中的span</span>
+	<br/>
+	<span>我是div1中的span</span>
+</div>
+</body>
+</html>

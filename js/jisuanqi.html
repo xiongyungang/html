@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="gb2312">
+    <title></title>
+    <script>
+     function showHello(){
+	var v1 = document.getElementById("v2").value;
+	var v2 = document.getElementById("v1").value;
+	document.getElementById("v3").value=parseInt(v1)+parseInt(v2);
+	}
+    </script>
+  </head>
+  <body>
+<input type="text" id="v1" >
+<input type="text" id="v2">
+<input type="text" id="v3">
+ <button onclick="showHello()">按钮</button>
+  </body>
+</html>

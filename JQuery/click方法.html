@@ -1,0 +1,21 @@
+<html>
+<script src="jquery.min.js"></script>
+<script>
+$(function(){
+	$("#b1").click(function(){
+		document.write("点击了按钮！");
+	});
+	$("#b2").click(function(){
+		$("#t").show();
+	});
+	$("#b3").click(function(){
+		$("#t").hide();
+	});
+});
+</script>
+
+<button id="b1">按钮</button>
+<button id="b2">显示div</button>
+<button id="b3">隐藏div</button>
+<div id="t">hello jquery!</div>
+</html>
